@@ -237,10 +237,26 @@
 \newcommand*\lgh{(h)}              %    laughter token within talk
 
 %%% Voice quality
-\newcommand*\smile[1]{%            %    smile voice (£...£)
+\newcommand*\smilev[1]{%           %    smile voice (£...£)
   \pounds#1\pounds}
-\newcommand*\creak[1]{%            %    creaky voice (\#...\#)
+\newcommand*\creak[1]{%            %    creaky voice (#...#)
   \#\,#1\,\#}
+\newcommand*\shaky[1]{%            %    shaky/crying voice (~...~)
+  \textasciitilde#1\textasciitilde}
+
+%%% Final pitch direction (end of turn/unit)
+\newcommand*\fdown{.}              %    falling
+\newcommand*\fmid{,}               %    slightly falling / continuing
+\newcommand*\fflat{\_}             %    flat / level
+\newcommand*\fup{?}                %    rising
+\newcommand*\fhalf{¿}              %    half-rising
+
+%%% Onset rush / hurried start
+\newcommand*\rush{$<$}             %    hurried word start (<word)
+
+%%% Analyst comment (double parentheses)
+\newcommand*\acom[1]{%             %    analyst comment ((text))
+  ((\,#1\,))}
 
 %%% Micropause / timed pause helpers (typed directly as (.) or (0.5) etc.)
 % No macro needed — compose in source
