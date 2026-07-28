@@ -66,6 +66,8 @@
   % always on left
   \flushleft                      % kills justification
   \frenchspacing                  % stops extra space after period
+  \renewcommand\thelinenumber{\ifnum\value{linenumber}<10 0\fi
+    \arabic{linenumber}}          % zero-padded line numbers (01, 02, ... 09)
   \list{}{                        % modified list environment
     \linenumbers* \setlength\labelwidth{#1}
     \addtolength{\rightmargin}{\convrightmargin}
@@ -73,10 +75,10 @@
     \setlength\parsep{0pt} \addtolength\leftmargin{-\itemindent}
     \addtolength\leftmargin{\labelsep}
     \setlength\listparindent{\itemindent} \let\makelabel=\@CAplaylabel
-    \setlength\topsep{3cm} } } 
+    \setlength\topsep{3cm} } }
 {\endlist}
 
-\newenvironment{convtran*}[1][\convlabelwidth]{% this last value sets 
+\newenvironment{convtran*}[1][\convlabelwidth]{% this last value sets
   % the default distance from label to text
   \def\baselinestretch{\convspacing} % line spacing (single by default)
   \reversemarginpar               % puts the arrow on the right
@@ -84,6 +86,8 @@
   % always on left
   \flushleft                      % kills justification
   \frenchspacing                  % stops extra space after period
+  \renewcommand\thelinenumber{\ifnum\value{linenumber}<10 0\fi
+    \arabic{linenumber}}          % zero-padded line numbers (01, 02, ... 09)
   \internallinenumbers
   \list{}{                        % modified list environment
     \linenumbers* \setlength\labelwidth{#1}
